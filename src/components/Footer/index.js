@@ -10,10 +10,16 @@ function Footer() {
       </p>
       <img className="Logo" src={Logo} alt="NekoFlix logo" />
       <p>
-        Orgulhosamente criado durante a
+        Projeto em desenvolvimento durante a
         {' '}
         <a href="https://www.alura.com.br/">
           Imersão React da Alura
+        </a>
+        {' '}
+        por
+        {' '}
+        <a href="https://www.linkedin.com/in/henrique-gabriel-rodrigues-cordeiro-95137530/">
+          Henrique Cordeiro
         </a>
       </p>
     </FooterBase>
