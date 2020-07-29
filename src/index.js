@@ -5,18 +5,19 @@ import Home from './pages/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import CadastroVideo from './pages/cadastro/Video';
 import CadastroCategoria from './pages/cadastro/Categoria';
+import Erro404 from './pages/Erro404';
 
 // Fazer a página de erro 404
-const Pagina404 = () => (<div>Página 404</div>);
+//const Pagina404 = () => (<div>Página 404</div>);
 
-ReactDOM.render(
+ReactDOM.render (
   <BrowserRouter>
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/cadastro/categoria" component={CadastroCategoria} />
       <Route path="/cadastro/video" component={CadastroVideo} />
       {/* Carrega se não encontrar nenhuma outra rota */}
-      <Route component={Pagina404} />
+      <Route component={Erro404} />
     </Switch>
   </BrowserRouter>,
   //<React.StrictMode>

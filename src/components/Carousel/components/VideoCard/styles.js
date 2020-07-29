@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const VideoTitle = styled.h1`
-  /*display: none;*/
   position: relative;
   z-index: 5;
   opacity: 0;
@@ -31,17 +30,6 @@ export const VideoCardContainer = styled.a`
 
   &:hover ${VideoTitle}, 
   &:focus ${VideoTitle} {
-    opacity: 1;
-  }
-
-  @media(hover: hover) and (pointer: fine) {
-    &:hover ${VideoTitle}, 
-    &:focus ${VideoTitle} {
-      opacity: 1;
-    }
-  }
-
-  &:ondragstart ${VideoTitle} {
     opacity: 1;
   }
 

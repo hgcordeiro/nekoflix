@@ -21,8 +21,8 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
       title={videoTitle}
     >
       <VideoTitle>
-      {videoTitle}
-    </VideoTitle>  
+        {videoTitle}
+      </VideoTitle>  
     </VideoCardContainer>
   );
 }
