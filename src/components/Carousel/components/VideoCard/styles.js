@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 
+export const VideoTitle = styled.h1`
+  /*display: none;*/
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
+`
+
 export const VideoCardContainer = styled.a`
+  z-index: 0;
   border: 2px solid;
   border-radius: 4px;
   text-decoration: none;
@@ -18,14 +27,43 @@ export const VideoCardContainer = styled.a`
   display: flex;
   align-items: flex-end;
   padding: 16px;
+  transition: opacity .3s ease 0s;
 
-  transition: opacity .3s;
-  &:hover,
-  &:focus {
-    opacity: .5;
+  &:hover ${VideoTitle}, 
+  &:focus ${VideoTitle} {
+    opacity: 1;
   }
-  
+
+  @media(hover: hover) and (pointer: fine) {
+    &:hover ${VideoTitle}, 
+    &:focus ${VideoTitle} {
+      opacity: 1;
+    }
+  }
+
+  &:ondragstart ${VideoTitle} {
+    opacity: 1;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    margin: auto;
+    opacity: 0;
+  }
+
   &:not(:first-child) {
     margin-left: 20px;
   }
 `;
+

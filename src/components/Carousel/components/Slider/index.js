@@ -16,6 +16,7 @@ const Container = styled.ul`
     transform: initial;
     &:before {
       font-size: 30px;
+      color: #00c86f;
     }
   }
   
@@ -37,16 +38,40 @@ export const SliderItem = styled.li`
   }
 `;
 
+function SampleNextArrow(props) {
+    const { className, style, onClick, categoryColor } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, color: categoryColor, display: "block" }}
+        onClick={onClick}
+      />
+    );
+}
+  
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block" }}
+        onClick={onClick}
+      />
+    );
+}
+
 
 const Slider = ({ children }) => (
   <Container>
     <SlickSlider {...{
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 300,
-      centerMode: false,
+      centerMode: true,
       variableWidth: true,
       adaptiveHeight: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
     }}
     >
       {children}
