@@ -28,6 +28,12 @@ export const VideoCardContainer = styled.a`
   padding: 16px;
   transition: opacity .3s ease 0s;
 
+  @media (max-width: 900px) {
+    flex: 0 0 144px;
+    width: 144px;
+    height: 99px;
+  }
+
   &:hover ${VideoTitle}, 
   &:focus ${VideoTitle} {
     opacity: 1;
