@@ -10,18 +10,21 @@ export const VideoTitle = styled.h1`
 export const VideoCardContainer = styled.a`
   z-index: 0;
   border: 2px solid;
-  border-radius: 4px;
+  /*border-radius: 4px;*/
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
   color: white;
   flex: 0 0 298px;
+  /*
   width: 298px;
   height: 197px;
+  */
+  width: 398px;
+  height: 209px;
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -31,7 +34,7 @@ export const VideoCardContainer = styled.a`
   @media (max-width: 900px) {
     flex: 0 0 144px;
     width: 144px;
-    height: 99px;
+    height: 76px;
   }
 
   &:hover ${VideoTitle}, 
