@@ -63,7 +63,7 @@ const Input = styled.input`
   }
   
   ${({ value }) => {
-    const hasValue = value.length > 0;
+    const hasValue = Boolean(value.length);
     return hasValue && css`
         &:not([type='color']) + ${Label.Text} {
           transform: scale(.6) translateY(-10px);
