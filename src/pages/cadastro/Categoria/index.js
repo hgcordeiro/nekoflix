@@ -76,11 +76,12 @@ function CadastroCategoria() {
         <Button>Cadastrar</Button>
 
         {
-          categorias.length ===0 && (
+          categorias.length === 0 && (
             <div>
               Carregando...
             </div>
-          )}
+          )
+        }
 
         <ul>
           {
